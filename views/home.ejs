@@ -1,15 +1,20 @@
-<title><%= title %></title>
-
-<div>
-    <h1>WeChat!</h1>
-    <form action="/login" method="post">
-        <input type="email" name="email" placeholder="Your email.." required>
-        <input type="password" name="password" placeholder="Your password.." required>
-        <input type="submit" value="Log In">
-    </form>
-    <form action="/sign-up" method="post">
-        <label>New to WeChat?
-            <input type="submit" value="Sign Up">
-        </label>
-    </form>
+<div class="main-div">
+    <title><%= title %></title>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<link rel="stylesheet" href="/css/home.css">
+    <h1><i class="fab fa-weixin"></i> WeChat!</h1>
+    <div class="sign-in">
+            <form action="/login" method="post">
+                <div><input type="email" name="email" placeholder="Your email.." required></div>
+                <div><input type="password" name="password" placeholder="Your password.." required></div>
+                <div><button type="submit">Log In <i class="fas fa-sign-in-alt"></i></button></div>
+            </form>
+    </div>
+   <div class="sign-up"> 
+        <form action="/sign-up" method="post">
+            <label>New to WeChat?
+                <button type="submit">Sign Up <i class="fas fa-user-plus"></i></button>
+            </label>
+        </form>
+</div>
 </div>

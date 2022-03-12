@@ -1,7 +1,8 @@
 <title><%= title %></title>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 <h1>Let's Talk</h1>
 <form action="/sign-out" method="get">
-    <input type="submit" value="log out">
+   <button type="submit">Log Out <i class="fas fa-sign-out-alt"></i></button>
 </form>
     <% if(locals.user) {%>
         <h1><%= locals.user.email %></h1>
@@ -16,7 +17,7 @@
             </ul>
             <div id="chat-message-input-container">
                 <input id="chat-message-input" placeholder="Type message here">
-                <button id="send-message">Send</button>
+                <button id="send-message">Send <i class="fas fa-paper-plane"></i></button>
             </div>
         </div>
     <%}%>
