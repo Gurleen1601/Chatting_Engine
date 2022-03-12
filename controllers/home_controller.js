@@ -1,13 +1,19 @@
 const User = require("../models/user");
 
 module.exports.home=function(req,res){
-    return res.render('home');
+    return res.render('home',{
+        title:'WeChat'
+    });
 }
 module.exports.logIn=function(req,res){
-    return res.render('chat_engine');
+    return res.render('chat_engine',{
+        title:'WeChat'
+    });
 }
 module.exports.signUp=function(req,res){
-    return res.render('sign_up');
+    return res.render('sign_up',{
+        title:'WeChat'
+    });
 }
 // get the sign up data
 module.exports.createUser=function(req,res){
@@ -37,6 +43,5 @@ module.exports.createUser=function(req,res){
 }
 
 module.exports.signOut=function(req,res){
-    req.logout();
     return res.redirect('/');
 }
