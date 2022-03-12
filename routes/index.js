@@ -9,6 +9,7 @@ router.get('/',homeController.home);
 router.post('/login',passport.authenticate(
     'local',
     {
+        failureFlash:'Invalid Username/Password',
         failureRedirect:'/'},
         ),
         homeController.logIn);

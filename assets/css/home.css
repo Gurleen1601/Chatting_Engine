@@ -37,6 +37,9 @@ body {
         background-color: #9de1fc;
         border-radius: 10px;
         text-align: center; }
+      body .main-div .sign-in input:focus {
+        border: none;
+        outline: none; }
       body .main-div .sign-in input:hover {
         background-color: lightyellow; }
       body .main-div .sign-in button {

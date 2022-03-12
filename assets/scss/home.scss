@@ -42,6 +42,10 @@ body{
                 border-radius: 10px;
                 text-align: center;
             }
+            input:focus{
+                border: none;
+                outline: none;
+            }
             input:hover{
                 background-color:lightyellow;
             }

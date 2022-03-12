@@ -1,7 +1,8 @@
 class ChatEngine{
-    constructor(chatBoxId,userEmail){
+    constructor(chatBoxId,userEmail,userName){
         this.chatBox=$(`#${chatBoxId}`);
         this.userEmail=userEmail;
+        this.userName=userName;
  
 
        // emitting a connect event
@@ -23,8 +24,9 @@ class ChatEngine{
             console.log('connection established using sockets..!!');
 
             self.socket.emit('join_room',{
+              user_name:self.userName,
               user_email:self.userEmail,
-              chatroom:'wechat'
+              chatroom:'wechat',
 
             });
             self.socket.on('user_joined',function(data){
@@ -38,6 +40,7 @@ class ChatEngine{
             if(msg!=''){
                 self.socket.emit('send_message',{
                     message:msg,
+                    user_name:self.userName,
                     user_email:self.userEmail,
                     chatroom:'wechat'
                 });
@@ -45,23 +48,23 @@ class ChatEngine{
         });
         // detect if the message is received
         self.socket.on('receive_message',function(data){
-            console.log('message received',data.message);
-
-            let newMessage=$('<li>');
+          console.log('message received',data.message);
+            $('#chat-message-input').val(null);
+          let newMessage=$('<li>');
             
             let messageType='other-message';
             if(data.user_email==self.userEmail){
                 messageType='self-message';
             }
+            newMessage.append($('<h3>',{
+                'html':data.user_name
+            }));
             newMessage.append($('<span>',{
                 'html' : data.message
-            }));
-            newMessage.append($('<sub>',{
-                'html':data.user_email
             }));
 
             newMessage.addClass(messageType);
             $('#chat-messages-list').append(newMessage);
-        })
+        });
     }
 }

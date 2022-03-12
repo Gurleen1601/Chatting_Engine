@@ -9,6 +9,8 @@ const passport=require('passport');
 const passportLocal=require('./config/passport-local-strategy');
 const MongoStore=require('connect-mongo')(session);
 const sassMiddleware=require('node-sass-middleware');
+const flash=require('connect-flash');
+const customMare=require('./config/middleware');
 
 // set up the chat server to be used with socket.io
 const chatServer=require('http').Server(app);
@@ -59,6 +61,9 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(passport.setAuthenticatedUser);
+
+app.use(flash());
+app.use(customMare.setFlash);
 
 // use express router
 app.use('/',require('./routes'));
