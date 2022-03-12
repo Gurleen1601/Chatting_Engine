@@ -15,12 +15,20 @@ body {
       width: 96.8%;
       margin-top: 0px;
       text-align: center;
-      padding: 10px; }
+      padding: 10px;
+      font-family: 'Satisfy', cursive; }
     body .main-div .sign-in {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-evenly; }
+      body .main-div .sign-in span {
+        color: white;
+        margin-left: -60%; }
+      body .main-div .sign-in .fas.fa-star-of-life {
+        font-size: 10px;
+        color: red;
+        margin-left: 3px; }
       body .main-div .sign-in input {
         background: transparent;
         height: 40px;

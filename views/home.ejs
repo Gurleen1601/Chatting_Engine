@@ -1,12 +1,15 @@
 <div class="main-div">
     <title><%= title %></title>
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Luckiest+Guy&family=Pacifico&family=Satisfy&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/home.css">
     <h1><i class="fab fa-weixin"></i> WeChat!</h1>
     <div class="sign-in">
             <form action="/login" method="post">
-                <div><input type="email" name="email" placeholder="Your email.." required></div>
-                <div><input type="password" name="password" placeholder="Your password.." required></div>
+                <div><span>Email:</span><i class="fas fa-star-of-life"></i><br><input type="email" name="email" placeholder="Your email.." required></div>
+                <div><span>Password:</span><i class="fas fa-star-of-life"></i><br><input type="password" name="password" placeholder="Your password.." required></div>
                 <div><button type="submit">Log In <i class="fas fa-sign-in-alt"></i></button></div>
             </form>
     </div>

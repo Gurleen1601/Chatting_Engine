@@ -1,12 +1,15 @@
 <title><%= title %></title>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 <link rel="stylesheet" href="/css/sign_up.css">
-<h1>Sign Up to WeChat!</h1>
-<div>
+<div class="main-div">
+    <h1>Sign Up to WeChat!</h1>
+   <div class="sign-up">
     <form action="/create-user" method="post">
-        <div><input type="text" name="name" placeholder="Your Name" required></div>
-        <div><input type="email" name="email" placeholder="Your Email" required></div>
-        <div> <input type="password" name="password" placeholder="Password" required></div>
-        <div><input type="password" name="confirm_password" placeholder=" Confirm Password" required></div>
+        <div><i class="fas fa-user" id="icons"></i><span>Name:</span><i class="fas fa-star-of-life"></i><br><input type="text" name="name" placeholder="Your Name" required></div>
+        <div><i class="fas fa-envelope" id="icons"></i><span>Email:</span><i class="fas fa-star-of-life"></i><br><input type="email" name="email" placeholder="Your Email" required></div>
+        <div><i class="fas fa-lock" id="icons"></i><span>Password:</span><i class="fas fa-star-of-life"></i><br><input type="password" name="password" placeholder="Password" required></div>
+        <div><i class="fas fa-lock" id="icons"></i><span>Confirm Password:</span><i class="fas fa-star-of-life"></i><br><input type="password" name="confirm_password" placeholder=" Confirm Password" required></div>
         <div><button type="submit">Sign Up</button></div>
     </form>
+   </div>
 </div>
